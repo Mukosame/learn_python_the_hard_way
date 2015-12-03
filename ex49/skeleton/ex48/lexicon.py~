@@ -1,0 +1,35 @@
+class lexicon(object):
+
+    def __init__ (self):
+        self.direction = 'north south east'
+        self.verb = 'go kill eat'
+        self.stop = 'the in of'
+        self.noun = 'bear princess'
+        self.number = '3 91234'
+        self.sentence = []
+
+    def findit(self, todo):
+        if (todo in self.direction):
+            return 'direction'
+        elif (todo in self.verb):
+            return 'verb'
+        elif(todo in self.stop):
+            return 'stop'
+        elif(todo in self.noun):
+            return 'noun'
+        elif(todo in self.number):
+            return 'number'
+        else:
+            return 'error'
+        
+    def scan(self, stuff):
+        #self.stuff = raw_input('> ')
+        self.words = stuff.split()
+        #analysis and return to a sentence
+        while len(self.words) != 0:
+            todo = self.words.pop()
+            self.sentence.append((self.findit(todo), todo))
+        return self.sentence
+
+lexicon = lexicon();
+print lexicon.scan('go north')
