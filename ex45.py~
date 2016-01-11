@@ -1,0 +1,60 @@
+## Animal is a obkect
+class Animal(object):
+    pass
+
+## Dog is Animal
+class Dog(Animal):
+    def __init__(self, name):
+        self.name = name
+
+## Cat
+class Cat(Animal):
+    def __init__(self,name):
+        self.name = name
+
+class Person(object):
+    def __init__(self, name):
+        self.name = name
+
+## Perspn has a pet of some kind
+        self.pet = None
+
+## Employee
+class Employee(Person):
+    def __init__(self, name, salary):
+        super(Employee, self).__init__(name)
+        self.salary = salary
+
+## Salary
+class Fish(object):
+    pass
+
+## Salmon
+class Salmon(Fish):
+    pass
+
+## Haliibut
+class Halibut(Fish):
+    pass
+
+## rover is a dog
+rover =Dog("Rover")
+
+## satan is a cat
+satan = Cat("Satan")
+
+## mary is a person
+mary = Person("Mary")
+
+## satan is mary's pet
+mary.pet = satan
+
+## frank is the employee
+frank = Employee("Frank", 120000)
+
+## flipper is a fish
+flipper = Fish()
+
+## crouse is Salmon
+crouse = Salmon()
+
